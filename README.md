@@ -20,4 +20,4 @@ The following is a list of the used packages:
 * pandas==2.2.2
 
 > [!NOTE]
-> In this newer version of biopython the Bio.SeqUtils.MeltingTemp "Tm_staluc" is depreceated. Therefore this function has been changed for "Tm_NN" with "nn_table=mt.DNA_NN1" as paramter. This change requires retraiing of the model.
+> In this newer version of biopython the Bio.SeqUtils.MeltingTemp "Tm_staluc" is depreceated. Therefore this function has been changed for "Tm_NN" with "nn_table=mt.DNA_NN1" as paramter. This change requires retraing of the model.
