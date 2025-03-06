@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import keras
 from keras.preprocessing import text
-from keras.preprocessing import sequence
+from keras.utils.data_utils import pad_sequences
 from keras.models import *
 from feature_util import *
 
@@ -39,7 +39,7 @@ def make_data(X):
     index_word = {v:k for k,v in word_index.items()}
     X = vectorizer.texts_to_sequences(X)
     X = [[word_index["START"]] + [w for w in x] for x in X]
-    X = sequence.pad_sequences(X)
+    X = pad_sequences(X)
     return X
 
 def my_feature(df_model, feature_options):
@@ -75,7 +75,7 @@ def output_prediction_old(inputs, df, model_type='esp'):
 
 def output_prediction(inputs, df, model_type='esp'):
     import os
-    from sklearn.externals import joblib
+    import joblib
     from sklearn.linear_model import LinearRegression
     #dir_path = os.path.dirname( os.path.realpath( __file__ ) )
     #model_file = model_type + '_rnn.hd5'
@@ -122,7 +122,7 @@ def effciency_predict(sequence, model_type='esp'):
         Cut_Pos.append( i - 4 )
         PAM.append( sequence_complement[i - 1:i + 2] )
 
-    pandas.set_option( 'Precision', 5 )
+    pandas.set_option( 'display.precision', 5 )
     df = pandas.DataFrame( {'Cut_Pos': Cut_Pos,
                             'Strand': Strand,
                             '21mer': gRNA,

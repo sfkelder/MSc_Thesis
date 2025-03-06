@@ -9,10 +9,10 @@ import pickle
 import keras
 from keras.preprocessing import text
 from keras.preprocessing import sequence
-from keras.layers import merge, Embedding, Bidirectional
+from keras.layers import Input, concatenate, Embedding, Bidirectional
 from keras.layers.core import *
 from keras.models import *
-from keras.layers.recurrent import LSTM
+from keras.layers import LSTM
 from keras.callbacks import ModelCheckpoint, EarlyStopping
 from keras.optimizers import *
 from sklearn.metrics import  mean_squared_error, r2_score

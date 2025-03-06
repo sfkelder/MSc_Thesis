@@ -156,11 +156,11 @@ def Tm_feature(data, feature_options=None):
 
     for i, seq in enumerate( sequence ):
         rna = False
-        featarray[i, 0] = Tm.Tm_staluc( seq, rna=rna )  # 21mer Tm
-        featarray[i, 1] = Tm.Tm_staluc( seq[segments[0][0]:segments[0][1]],
-                                        rna=rna )  # 5nts immediately proximal of the NGG PAM
-        featarray[i, 2] = Tm.Tm_staluc( seq[segments[1][0]:segments[1][1]], rna=rna )  # 8-mer
-        featarray[i, 3] = Tm.Tm_staluc( seq[segments[2][0]:segments[2][1]], rna=rna )  # 4-mer
+        featarray[i, 0] = Tm.Tm_NN( seq, nn_table=Tm.RNA_NN2 )  # 21mer Tm
+        featarray[i, 1] = Tm.Tm_NN( seq[segments[0][0]:segments[0][1]],
+                                        nn_table=Tm.RNA_NN2 )  # 5nts immediately proximal of the NGG PAM
+        featarray[i, 2] = Tm.Tm_NN( seq[segments[1][0]:segments[1][1]], nn_table=Tm.RNA_NN2 )  # 8-mer
+        featarray[i, 3] = Tm.Tm_NN( seq[segments[2][0]:segments[2][1]], nn_table=Tm.RNA_NN2 )  # 4-mer
 
     feat = pandas.DataFrame( featarray, index=data.index,
                              columns=["Tm global_%s" % rna, "5mer_end_%s" % rna, "8mer_middle_%s" % rna,
