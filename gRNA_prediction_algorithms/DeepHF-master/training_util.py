@@ -24,6 +24,8 @@ with open('data/esp_seq_data_array.pkl', 'rb') as handle:
     esp_data = pickle.load(handle)
 with open('data/hf_seq_data_array.pkl', 'rb') as handle:
     hf_data = pickle.load(handle)
+with open('/content/MSc_Thesis/data/DeepHF_MSc_Thesis_dataset.pkl', 'rb') as handle:
+    MSc_Thesis_data = pickle.load(handle)
     
 
 def load_data(X,X_biofeat,y, test_size = 0.15,random_state=40):
@@ -40,6 +42,8 @@ def get_metrics(model,model_type='esp'):
         X,X_biofeat,y = esp_data
     elif model_type == 'hf':
         X,X_biofeat,y = hf_data
+    elif model_type == 'MSc_Thesis':
+        X,X_biofeat,y = MSc_Thesis_data
     X_train, X_test, X_train_biofeat, X_test_biofeat, y_train, y_test = load_data(X, X_biofeat, y,random_state=40) 
     y_train_pred = model.predict([X_train,X_train_biofeat])
     y_test_pred = model.predict([X_test,X_test_biofeat])
@@ -55,6 +59,8 @@ def lstm_model(model_type='esp', batch_size=90, epochs=50, initializer='0',em_di
         X,X_biofeat,y = esp_data
     elif model_type == 'hf':
         X,X_biofeat,y = hf_data
+    elif model_type == 'MSc_Thesis':
+        X,X_biofeat,y = MSc_Thesis_data
     X_train, X_test, X_train_biofeat, X_test_biofeat, y_train, y_test = load_data(X, X_biofeat, y,random_state=33) 
     
     fc_activation = fc_activation_dict[str(fc_activation)]

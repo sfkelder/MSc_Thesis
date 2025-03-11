@@ -21,6 +21,7 @@ model_wt_t7 = load_model( wt_t7_model_file_path )
 model_hf = load_model( hf_model_file_path )
 model_esp = load_model( esp_model_file_path )
 
+MSc_Thesis_model = load_model('/content/MSc_Thesis/models/DeepHF_MSc_Thesis_model.h5')
 
 
 #get embedding data
@@ -88,6 +89,8 @@ def output_prediction(inputs, df, model_type='esp'):
         model = model_wt_t7
     elif model_type == 'hf':
         model = model_hf
+    elif model_type == 'MSc_Thesis':
+        model = MSc_Thesis_model
     Efficiency = model.predict( inputs )
     df['gRNA_Seq'] = df['21mer'].apply( lambda x: x[:-1] )
     df['Efficiency'] = np.clip( Efficiency, 0, 1 )
