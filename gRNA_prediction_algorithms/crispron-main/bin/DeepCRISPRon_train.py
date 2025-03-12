@@ -57,7 +57,7 @@ print(
 print(', '.join(TRAIN_FP))
 
 #length of input seq
-eLENGTH=30
+eLENGTH=21
 #depth of onehot encoding
 eDEPTH=4
 

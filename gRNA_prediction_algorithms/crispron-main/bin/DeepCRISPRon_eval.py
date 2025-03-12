@@ -32,7 +32,7 @@ from Bio import SeqIO
 np.set_printoptions(threshold=np.inf)
 
 #length of input seq
-eLENGTH=30
+eLENGTH=21
 #depth of onehot encoding
 eDEPTH=4
 

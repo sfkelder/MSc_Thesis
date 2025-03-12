@@ -2,9 +2,9 @@
 
 which diff || exit 1
 
-./bin/CRISPRon.sh test/seq.fa test/outdir.test
+/content/MSc_Thesis/gRNA_prediction_algorithms/crispron-main/bin/CRISPRon.sh /content/MSc_Thesis/gRNA_prediction_algorithms/crispron-main/test/seq.fa /content/MSc_Thesis/gRNA_prediction_algorithms/crispron-main/test/outdir.test
 
-if (diff -r test/outdir.test test/outdir.original | grep -e Only -e diff); then
+if (diff -r /content/MSc_Thesis/gRNA_prediction_algorithms/crispron-main/test/outdir.test /content/MSc_Thesis/gRNA_prediction_algorithms/crispron-main/test/outdir.original | grep -e Only -e diff); then
 	echo TEST failed
 	exit 1
 fi
