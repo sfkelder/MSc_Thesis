@@ -1,6 +1,17 @@
 # MSc_Thesis
 This project contains all materials used during my MSc_Thesis
 
+## Exploratory data analysis (EDA)
+During this reserach two algorithms (Crispon, DeepHF) will be used. The original data sets will be used for benchmarking and later be extended with RNA-folding parameters. An exploratory data analysis has been peformed on both datasets. For easy access, a [Google colab notebook](https://colab.research.google.com/drive/1H8SAP57BMxeWk4YCr6rzjuvi5yCL4UEI?usp=sharing) has been created providing all source code to replicate the EDA.  
+
+## RNAfold
+
+
+## SPOT-RNA
+For easy access, a [Google colab notebook](https://colab.research.google.com/drive/1n3VpD_FapnsTkmjPTaqPcc7sn5IHCCev?usp=sharing) has been created providing all source code to replicate the steps taken in this research.
+
+## Crispron
+
 
 ## DeepHF
 For easy access, a [Google colab notebook](https://colab.research.google.com/drive/15uKWcshGRR8iPerZn6ijbF6HFwk2Bl3A?usp=sharing) has been created providing all source code to replicate the steps taken in this research. As of this writing, the Python version of the Google colab is 3.11.11. 
