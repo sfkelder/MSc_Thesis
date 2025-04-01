@@ -29,7 +29,17 @@ The following is a list of the used packages:
 * tensorflow==2.18.0
 
 ## Crispron
+For easy access, a [Google colab notebook](https://colab.research.google.com/drive/1qe71tjQ6ZclD1AYdiOgs8zDFHBMdyyB9?usp=sharing) has been created providing all source code to replicate the steps taken in this research. As of this writing, the Python version of the Google colab is 3.11.11. 
 
+The following is a list of the used packages:
+
+* numpy==1.23.5
+* Bio==1.85
+* scipy==1.14.1
+* tensorflow==2.12.0
+* sklearn==1.6.1
+* pandas==2.2.2
+* viennaRNA==2.7.0
 
 ## DeepHF
 For easy access, a [Google colab notebook](https://colab.research.google.com/drive/15uKWcshGRR8iPerZn6ijbF6HFwk2Bl3A?usp=sharing) has been created providing all source code to replicate the steps taken in this research. As of this writing, the Python version of the Google colab is 3.11.11. 
