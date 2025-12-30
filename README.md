@@ -61,3 +61,11 @@ The following is a list of the used packages:
 
 > [!NOTE]
 > In this newer version of biopython the Bio.SeqUtils.MeltingTemp "Tm_staluc" is depreceated. Therefore this function has been changed for "Tm_NN" with "nn_table=mt.DNA_NN1" as paramter. This change requires retraing of the model.
+
+## New Model
+For easy access, this section includes 3 google colab notebooks covering trainig, evaluation/testing, and a pipeline for usage.
+
+1. [training notebook](https://colab.research.google.com/drive/1GhQj7VZWvK9z23GKq16nykIhip4Myc4e?usp=sharing)
+2. [Evaluation/testing notebook]()
+3. [pipeline notebook]()
+
