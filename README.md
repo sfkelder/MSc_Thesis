@@ -67,5 +67,4 @@ For easy access, this section includes 3 google colab notebooks covering trainig
 
 1. [Training notebook](https://colab.research.google.com/drive/1GhQj7VZWvK9z23GKq16nykIhip4Myc4e?usp=sharing)
 2. [Evaluation/testing notebook](https://colab.research.google.com/drive/1Eiif71MVUFk0BRONv-n7C480uWE-ychT?usp=sharing)
-3. [Pipeline notebook]()
-
+3. [Pipeline notebook](https://colab.research.google.com/drive/1kjnLac0hsyjAd3JicrgTvU8zlCIPDBDb?usp=sharing)
